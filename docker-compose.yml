@@ -1,0 +1,11 @@
+version: "3.5"
+services:
+  php_base:
+    image: cbergau/php_base
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 80:80
